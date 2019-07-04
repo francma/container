@@ -1,0 +1,32 @@
+{
+  "name": "francma/container",
+  "require": {
+    "psr/container": "^1.0",
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "authors": [
+    {
+      "name": "Martin Franc",
+      "email": "me@martinfranc.eu"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Francma\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "type": "library",
+  "description": "PSR-11 Container implementation",
+  "version": "1.0",
+  "provide": {
+    "psr/container-implementation": "1.0.0"
+  },
+  "scripts": {
+    "test": "find tests -type f -exec php -d'zend.assertions=1' -d'assert.exception=1' {} \\;",
+    "phpcs": "vendor/bin/phpcs --standard=PSR2 src"
+  }
+}
